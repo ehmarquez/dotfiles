@@ -1,0 +1,16 @@
+# Remap caps lock key to escape
+setxkbmap -option caps:escape
+
+# up function to navigate parent directories
+function up () {
+    ups=""
+    for i in $(seq 1 $1)
+        do 
+            ups=$ups"../"
+        done
+    cd $ups
+}
+
+# CLI tool for autocorrect
+eval $(thefuck --alias ffs)
+
